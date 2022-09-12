@@ -18,10 +18,9 @@ public class Assigment2Application {
 		while(tries < 5) {
 			int userInput =  scanner.nextInt();
 			if (userInput == randomnumber) {
-				System.out.println("You win!!!");
+				System.out.println("Really Good, You win!!!");
 				break;
 			}else if (userInput < 1 || userInput > 100) {
-				tries++;
 				System.out.println("Your guess is not between 1 and 100, please try again");
 			}else if (userInput < randomnumber) {
 				tries++;
@@ -30,10 +29,12 @@ public class Assigment2Application {
 				tries++;
 				System.out.println("Please pick a lower number ");
 			}
-
+			
+		} if (tries == 5) {
+			System.out.println("You Lose");
+			System.out.println("The number was: " + randomnumber );
 		}
-		System.out.println("You lose the number was: " + randomnumber);
-
+			
 		scanner.close();
 	}
 }
