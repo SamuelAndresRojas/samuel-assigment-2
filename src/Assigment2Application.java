@@ -9,7 +9,7 @@ public class Assigment2Application {
 
 		int randomnumber = random.nextInt(100) + 1;
 
-		System.out.println(randomnumber);
+//		System.out.println(randomnumber);
 
 		System.out.println("Hello, Let's see if you guess the number");
 		System.out.println("Pick a number between 1 and 100");
@@ -20,10 +20,13 @@ public class Assigment2Application {
 			if (userInput == randomnumber) {
 				System.out.println("You win!!!");
 				break;
+			}else if (userInput < 1 || userInput > 100) {
+				tries++;
+				System.out.println("Your guess is not between 1 and 100, please try again");
 			}else if (userInput < randomnumber) {
 				tries++;
 				System.out.println("Please pick a higher number ");
-			} else if (userInput > randomnumber){
+			}else if (userInput > randomnumber){
 				tries++;
 				System.out.println("Please pick a lower number ");
 			}
